@@ -1,0 +1,26 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "MIT"
+
+[[mods]]
+modId = "tomefix"
+version = "${version}"
+displayName = "Tome Fix"
+description = "Stops the Quark + Enchiridion infinite recursion (StackOverflowError in EnchantmentHelper.getComponentType)."
+
+[[mixins]]
+config = "tomefix.mixins.json"
+
+[[dependencies.tomefix]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.tomefix]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"
